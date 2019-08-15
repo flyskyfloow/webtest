@@ -1,0 +1,17 @@
+.navbar{
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.left_menu{
+    background-color: #53d2b5;
+    height: auto;
+    width: 10%;
+}
+
+
+.text-container{
+    height: auto;
+    width: 90%;
+    float: left;
+}

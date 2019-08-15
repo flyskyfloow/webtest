@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Title</title>
+    <script src="../../static/jquery/jquery-3.4.1.js"></script>
+    <script src="../../static/bootstrap/js/bootstrap.js"></script>
+    <link href="../../static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../../static/mysheet.css" rel="stylesheet">
+    <style>
+        .nav {
+            background-color: #F5F5DC;
+        }
+
+        .nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            line-height: 3em;
+        }
+
+        .nav a {
+            display: block;
+            width: 10em;
+            text-align: center;
+            text-decoration: none;
+            background-color: #CCCCCC;
+        }
+
+        .nav a:hover {
+            background-color: #E6E6FA;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">MTRA</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">MORE</a></li>
+    </ul>
+
+</div>
+
+<div>
+    {% for i in test_list %}
+        <p style="background-color: #7abaff">{{ i.last_name }}</p>
+    {% endfor %}
+
+    <form action="" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+    {% if error %}
+        <p style="color: red;">Please submit a search term.</p>
+    {% endif %}
+
+</div>
+</body>
+</html>
